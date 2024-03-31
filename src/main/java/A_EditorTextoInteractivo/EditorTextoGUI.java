@@ -44,4 +44,38 @@ public class EditorTextoGUI extends JFrame {
 
     }
 
+    private void guardarArchivo() {
+        fileChooser = new JFileChooser();
+        int seleccion = fileChooser.showSaveDialog(this);
+        if (seleccion == JFileChooser.APPROVE_OPTION) {
+            File archivo = fileChooser.getSelectedFile();
+            try {
+                FileWriter fileWriter = new FileWriter(archivo);
+                fileWriter.write(textArea.getText());
+                fileWriter.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private void abrirArchivo() {
+        fileChooser = new JFileChooser();
+        int seleccion = fileChooser.showOpenDialog(this);
+        if (seleccion == JFileChooser.APPROVE_OPTION) {
+            File archivo = fileChooser.getSelectedFile();
+            try {
+                FileReader fileReader = new FileReader(archivo);
+                BufferedReader bufferedReader = new BufferedReader(fileReader);
+                String linea;
+                while ((linea = bufferedReader.readLine()) != null) {
+                    textArea.append(linea + "\n");
+                }
+                fileReader.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
 }
