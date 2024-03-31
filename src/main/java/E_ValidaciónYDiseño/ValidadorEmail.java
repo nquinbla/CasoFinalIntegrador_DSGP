@@ -7,8 +7,10 @@ import java.awt.event.ActionListener;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+// Clase que valida un email introducido por el usuario
 public class ValidadorEmail extends JFrame {
 
+    // Constructor que inicializa la ventana y sus componentes
     public ValidadorEmail() {
         setTitle("Validador de Email");
         setSize(400, 200);
@@ -36,6 +38,7 @@ public class ValidadorEmail extends JFrame {
         add(panel);
     }
 
+    // Método principal que crea una instancia de la clase ValidadorEmail y la muestra
     private boolean validarEmail(String email) {
         String regex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$";
         Pattern pattern = Pattern.compile(regex);
