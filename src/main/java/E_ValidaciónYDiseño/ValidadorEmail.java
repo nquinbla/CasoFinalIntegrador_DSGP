@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class ValidadorEmail {
+public class ValidadorEmail extends JFrame {
 
     public ValidadorEmail() {
         setTitle("Validador de Email");
