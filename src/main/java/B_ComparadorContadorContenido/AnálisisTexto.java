@@ -1,9 +1,9 @@
 package B_ComparadorContadorContenido;
 
-// Clase ContadorTexto
-public class ContadorTexto {
+// Clase AnálisisTexto
+public class AnálisisTexto {
     private String texto;
-    public ContadorTexto() {
+    public AnálisisTexto() {
         texto = "";
     }
     // Método para contar palabras
