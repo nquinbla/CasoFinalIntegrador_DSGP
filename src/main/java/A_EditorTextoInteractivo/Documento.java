@@ -1,22 +1,21 @@
 package A_EditorTextoInteractivo;
 
 import java.io.*;
+import java.util.*;
 
+// Clase Documento
 public class Documento {
     private String contenido;
 
+    // Constructor
     public Documento() {
         contenido = "";
     }
+    // Getters y Setters
+    public String getContenido() {return contenido;}
+    public void setContenido(String contenido) {this.contenido = contenido;}
 
-    public String getContenido() {
-        return contenido;
-    }
-
-    public void setContenido(String contenido) {
-        this.contenido = contenido;
-    }
-
+    // Método para guardar archivo
     public void guardarArchivo(String nombreArchivo) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(nombreArchivo))) {
             writer.write(contenido);
@@ -25,6 +24,7 @@ public class Documento {
         }
     }
 
+    // Método para cargar archivo
     public void cargarArchivo(String nombreArchivo) {
         try (BufferedReader reader = new BufferedReader(new FileReader(nombreArchivo))) {
             String linea;
@@ -38,14 +38,36 @@ public class Documento {
         }
     }
 
+    // Método para contar palabras
     public int contarPalabras() {
         String[] palabras = contenido.split("\\s+");
         return palabras.length;
     }
 
+    // Método para contar líneas
     public String[] obtenerPalabrasComunes() {
-        // Lógica para obtener palabras comunes
-        return null;
+        String[] palabras = contenido.split("\\s+");
+        Map<String, Integer> frequencyMap = new HashMap<>();
+
+        for (String palabra : palabras) {
+            frequencyMap.put(palabra, frequencyMap.getOrDefault(palabra, 0) + 1);
+        }
+
+        // Sort the entries by frequency in descending order
+        List<Map.Entry<String, Integer>> list = new ArrayList<>(frequencyMap.entrySet());
+        list.sort(Map.Entry.<String, Integer>comparingByValue().reversed());
+
+        // Get the most common words
+        List<String> commonWords = new ArrayList<>();
+        for (Map.Entry<String, Integer> entry : list) {
+            if (commonWords.size() < 10) { // Change this value to get more or less common words
+                commonWords.add(entry.getKey());
+            } else {
+                break;
+            }
+        }
+
+        return commonWords.toArray(new String[0]);
     }
 }
 
