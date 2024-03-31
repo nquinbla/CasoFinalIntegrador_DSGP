@@ -44,7 +44,7 @@ public class Documento {
         return palabras.length;
     }
 
-    // Método para contar líneas
+    // Método para obtener palabras comunes
     public String[] obtenerPalabrasComunes() {
         String[] palabras = contenido.split("\\s+");
         Map<String, Integer> frequencyMap = new HashMap<>();
@@ -53,14 +53,13 @@ public class Documento {
             frequencyMap.put(palabra, frequencyMap.getOrDefault(palabra, 0) + 1);
         }
 
-        // Sort the entries by frequency in descending order
+
         List<Map.Entry<String, Integer>> list = new ArrayList<>(frequencyMap.entrySet());
         list.sort(Map.Entry.<String, Integer>comparingByValue().reversed());
 
-        // Get the most common words
         List<String> commonWords = new ArrayList<>();
         for (Map.Entry<String, Integer> entry : list) {
-            if (commonWords.size() < 10) { // Change this value to get more or less common words
+            if (commonWords.size() < 10) {
                 commonWords.add(entry.getKey());
             } else {
                 break;
