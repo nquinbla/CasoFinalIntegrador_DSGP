@@ -1,6 +1,6 @@
 package A_EditorTextoInteractivo;
 
-import java.nio.Buffer;
+import java.io.*;
 
 public class Documento {
     private String contenido;
