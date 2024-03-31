@@ -3,7 +3,7 @@ Caso Final Integrador: Desarrollo de un Sistema de Gestión de Publicaciones de 
 LINK: https://github.com/nquinbla/CasoFinalIntegrador_Publicaciones.git
 
 ## DESCRIPCIÓN
- 
+ Programa donde
 
 ## MÓDULO
  ### 1. Editor de Texto Interactivo (Ejercicio 1 y 2)
