@@ -4,7 +4,10 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
+// Clase ComparadorContenido
 public class ComparadorContenido {
+
+    // Método para comparar contenido
     public static boolean compararContenido(String archivo1, String archivo2) {
         try (BufferedReader reader1 = new BufferedReader(new FileReader(archivo1));
              BufferedReader reader2 = new BufferedReader(new FileReader(archivo2))) {
