@@ -22,6 +22,26 @@ public class EditorTextoGUI extends JFrame {
         JMenu menuArchivo = new JMenu("Archivo");
         JMenuItem menuItemGuardar = new JMenuItem("Guardar");
         JMenuItem menuItemAbrir = new JMenuItem("Abrir");
+
+        menuItemGuardar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                guardarArchivo();
+            }
+        });
+
+        menuItemAbrir.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                abrirArchivo();
+            }
+        });
+
+        menuArchivo.add(menuItemGuardar);
+        menuArchivo.add(menuItemAbrir);
+        menuBar.add(menuArchivo);
+        setJMenuBar(menuBar);
+
     }
 
 }
