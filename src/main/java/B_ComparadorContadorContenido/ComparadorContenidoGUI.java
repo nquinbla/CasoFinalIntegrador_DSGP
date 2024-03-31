@@ -5,11 +5,13 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+// Clase ComparadorContenidoGUI
 public class ComparadorContenidoGUI extends JFrame {
 
     private JTextArea areaArchivo1;
     private JTextArea areaArchivo2;
 
+    // Constructor
     public ComparadorContenidoGUI() {
         setTitle("Comparador de Contenido");
         setSize(600, 400);
@@ -41,6 +43,7 @@ public class ComparadorContenidoGUI extends JFrame {
         add(panelBoton, BorderLayout.SOUTH);
     }
 
+    // Método para comparar archivos
     private void compararArchivos() {
         String textoArchivo1 = areaArchivo1.getText();
         String textoArchivo2 = areaArchivo2.getText();
