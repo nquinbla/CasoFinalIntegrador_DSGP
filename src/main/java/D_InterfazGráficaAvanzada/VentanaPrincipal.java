@@ -7,12 +7,14 @@ import java.awt.event.ActionListener;
 
 public class VentanaPrincipal extends JFrame {
 
+    private JDesktopPane desktopPane;
+
     public VentanaPrincipal() {
         setTitle("Interfaz Gráfica Avanzada");
         setSize(800, 600);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        JDesktopPane desktopPane = new JDesktopPane();
+        desktopPane = new JDesktopPane();
         setContentPane(desktopPane);
 
         JMenuBar menuBar = new JMenuBar();
@@ -47,7 +49,7 @@ public class VentanaPrincipal extends JFrame {
     }
 
     private void cerrarTodasVentanas() {
-        JInternalFrame[] ventanas = this.getContentPane().getAllFrames();
+        JInternalFrame[] ventanas = desktopPane.getAllFrames();
         for (JInternalFrame ventana : ventanas) {
             ventana.dispose();
         }
