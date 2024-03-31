@@ -5,11 +5,13 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+// Clase que representa la interfaz gráfica de un buscador de palabras
 public class BuscadorPalabrasGUI extends JFrame {
 
     private JTextArea areaTexto;
     private JTextField campoBusqueda;
 
+    // Constructor de la clase
     public BuscadorPalabrasGUI() {
         setTitle("Buscador de Palabras");
         setSize(600, 400);
@@ -37,6 +39,7 @@ public class BuscadorPalabrasGUI extends JFrame {
         add(panelBuscar, BorderLayout.SOUTH);
     }
 
+    // Método que busca una palabra en el texto y muestra un mensaje con el resultado
     private void buscarPalabra() {
         String texto = areaTexto.getText();
         String palabra = campoBusqueda.getText();
@@ -44,6 +47,7 @@ public class BuscadorPalabrasGUI extends JFrame {
         JOptionPane.showMessageDialog(this, "La palabra \"" + palabra + "\" aparece " + cantidad + " veces en el texto.", "Resultado de Búsqueda", JOptionPane.INFORMATION_MESSAGE);
     }
 
+    // Método principal que crea una instancia de la clase BuscadorPalabrasGUI y la muestra
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
