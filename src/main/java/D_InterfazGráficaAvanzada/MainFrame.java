@@ -19,22 +19,22 @@ public class MainFrame extends JFrame {
 
         // Título Principal "UAX"
         JLabel tituloPrincipal = new JLabel("UAX");
-        tituloPrincipal.setFont(new Font("Ardela Edge ARDELA EDGE X03 Extra Bold", Font.PLAIN, 72));
+        tituloPrincipal.setFont(new Font("Ardela Edge ARDELA EDGE X03 Extra Bold", Font.PLAIN, 132));
         tituloPrincipal.setForeground(Color.BLUE);
-        tituloPrincipal.setBounds(150, 400, 500, 100); // Establecer la ubicación y el tamaño
+        tituloPrincipal.setBounds(500, 400, 500, 100); // Establecer la ubicación y el tamaño
         panelPrincipal.add(tituloPrincipal);
 
         // Subtítulos "Alfonso X el Sabio" y "Estructuras de datos"
         JLabel subtitulo1 = new JLabel("Universidad Alfonso X el Sabio");
         subtitulo1.setFont(new Font("Touch Me Sans Petite Semi Bold", Font.PLAIN, 24));
         subtitulo1.setForeground(Color.BLACK);
-        subtitulo1.setBounds(150, 535, 500, 50); // Establecer la ubicación y el tamaño
+        subtitulo1.setBounds(425, 535, 500, 50); // Establecer la ubicación y el tamaño
         panelPrincipal.add(subtitulo1);
 
         JLabel subtitulo2 = new JLabel("Estructuras de datos");
         subtitulo2.setFont(new Font("Touch Me Sans Petite Semi Bold", Font.PLAIN, 24));
         subtitulo2.setForeground(Color.BLACK);
-        subtitulo2.setBounds(150, 570, 300, 50); // Establecer la ubicación y el tamaño
+        subtitulo2.setBounds(460, 570, 300, 50); // Establecer la ubicación y el tamaño
         panelPrincipal.add(subtitulo2);
 
         // Logo de la Universidad UAX
