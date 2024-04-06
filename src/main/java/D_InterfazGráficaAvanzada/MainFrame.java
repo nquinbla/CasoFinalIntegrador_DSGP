@@ -4,6 +4,7 @@ import A_EditorTextoInteractivo.EditorTextoGUI;
 import B_ComparadorContadorContenido.ComparadorContenidoGUI;
 import C_BúsquedaYGestión.BuscadorPalabrasGUI;
 import E_ValidaciónYDiseño.HerramientaDibujo;
+import E_ValidaciónYDiseño.ValidadorEmail;
 
 import javax.swing.*;
 import java.awt.*;
@@ -144,11 +145,11 @@ public class MainFrame extends JFrame {
         menuC.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-// Crear los elementos del menú para "Búsqueda y Gestión"
+            // Crear los elementos del menú para "Búsqueda y Gestión"
                 JMenuItem itemBuscar = new JMenuItem("Buscar Palabras");
                 JMenuItem itemGestionar = new JMenuItem("Gestionar Contactos");
 
-// Agregar ActionListener a los elementos del menú
+            // Agregar ActionListener a los elementos del menú
                 itemBuscar.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
@@ -166,7 +167,7 @@ public class MainFrame extends JFrame {
                     }
                 });
 
-// Agregar los elementos del menú a "Búsqueda y Gestión"
+            // Agregar los elementos del menú a "Búsqueda y Gestión"
                 menuC.add(itemBuscar);
                 menuC.add(itemGestionar);            }
         });
@@ -174,12 +175,12 @@ public class MainFrame extends JFrame {
         menuD.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-// Crear los elementos del menú para "Interfaz Gráfica Avanzada"
+            // Crear los elementos del menú para "Interfaz Gráfica Avanzada"
                 JMenuItem itemSeguimientoRaton = new JMenuItem("Seguimiento del Ratón");
                 JMenuItem itemBarraDesplazamiento = new JMenuItem("Barra de Desplazamiento Interactiva");
                 JMenuItem itemHerramientaDibujo = new JMenuItem("Herramienta de Dibujo");
 
-// Agregar ActionListener a los elementos del menú
+            // Agregar ActionListener a los elementos del menú
                 itemSeguimientoRaton.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
@@ -207,7 +208,7 @@ public class MainFrame extends JFrame {
                     }
                 });
 
-// Agregar los elementos del menú a "Interfaz Gráfica Avanzada"
+            // Agregar los elementos del menú a "Interfaz Gráfica Avanzada"
                 menuD.add(itemSeguimientoRaton);
                 menuD.add(itemBarraDesplazamiento);
                 menuD.add(itemHerramientaDibujo);            }
@@ -216,8 +217,32 @@ public class MainFrame extends JFrame {
         menuE.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Código para mostrar las opciones de Validación y Diseño
-            }
+            // Crear los elementos del menú para "Validación y Diseño"
+                JMenuItem itemValidarEmail = new JMenuItem("Validar Email");
+                JMenuItem itemHerramientaDibujo = new JMenuItem("Herramienta de Dibujo");
+
+            // Agregar ActionListener a los elementos del menú
+                itemValidarEmail.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        // Código para validar email
+                        ValidadorEmail validadorEmail = new ValidadorEmail();
+                        validadorEmail.setVisible(true);
+                    }
+                });
+
+                itemHerramientaDibujo.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        // Código para mostrar la funcionalidad de la herramienta de dibujo
+                        HerramientaDibujo herramientaDibujo = new HerramientaDibujo();
+                        herramientaDibujo.setVisible(true);
+                    }
+                });
+
+            // Agregar los elementos del menú a "Validación y Diseño"
+                menuE.add(itemValidarEmail);
+                menuE.add(itemHerramientaDibujo);            }
         });
     }
     public static void main(String[] args) {
