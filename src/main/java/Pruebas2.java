@@ -16,6 +16,5 @@ public class Pruebas2 {
                 frame.setVisible(true);
             }
         });
-
-}
+    }
 }
