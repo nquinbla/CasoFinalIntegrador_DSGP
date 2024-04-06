@@ -21,7 +21,7 @@ public class MainFrame extends JFrame {
         JLabel tituloPrincipal = new JLabel("UAX");
         tituloPrincipal.setFont(new Font("Ardela Edge ARDELA EDGE X03 Extra Bold", Font.PLAIN, 72));
         tituloPrincipal.setForeground(Color.BLUE);
-        tituloPrincipal.setAlignmentX(Component.CENTER_ALIGNMENT); // Centra el título horizontalmente
+        tituloPrincipal.setBounds(250, 50, 200, 100); // Establecer la ubicación y el tamaño
         panelPrincipal.add(tituloPrincipal);
 
         // Subtítulos "Alfonso X el Sabio" y "Estructuras de datos"
