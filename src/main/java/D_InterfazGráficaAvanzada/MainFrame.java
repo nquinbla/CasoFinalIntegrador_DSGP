@@ -26,9 +26,8 @@ public class MainFrame extends JFrame {
         add(panelPrincipal);
 
         // Título Principal "UAX"
-        JLabel tituloPrincipal = new JLabel("UAX");
+        JLabel tituloPrincipal = new JLabel("<html><font color='grey'>U</font><font color='grey'>A</font><font color='blue'>X</font></html>");        tituloPrincipal.setFont(new Font("Ardela Edge ARDELA EDGE X03 Extra Bold", Font.PLAIN, 142));
         tituloPrincipal.setFont(new Font("Ardela Edge ARDELA EDGE X03 Extra Bold", Font.PLAIN, 142));
-        tituloPrincipal.setForeground(Color.BLUE);
         tituloPrincipal.setBounds(500, 400, 500, 125); // Establecer la ubicación y el tamaño
         panelPrincipal.add(tituloPrincipal);
 
