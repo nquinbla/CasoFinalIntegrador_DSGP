@@ -61,189 +61,70 @@ public class MainFrame extends JFrame {
         JMenu menuE = new JMenu("Validación y Diseño");
 
         // Agregar los menús a la barra de menú
-        menuBar.add(menuA);
-        menuBar.add(menuB);
-        menuBar.add(menuC);
-        menuBar.add(menuD);
-        menuBar.add(menuE);
+        menuBar.add(menuA); // Agregar el menú "Editor de Texto Interactivo"
+        menuBar.add(menuB); // Agregar el menú "Comparador y Contador de Contenido"
+        menuBar.add(menuC); // Agregar el menú "Búsqueda y Gestión"
+        menuBar.add(menuD); // Agregar el menú "Interfaz Gráfica Avanzada"
+        menuBar.add(menuE); // Agregar el menú "Validación y Diseño"
 
-        menuA.addActionListener(new ActionListener() {
+        // Agregar la barra de menú al marco principal
+        setJMenuBar(menuBar);
+
+        // Configurar la acción de los elementos del menú para cada paquete
+        JMenuItem item1 = new JMenuItem("Editor de Texto Interactivo");
+        item1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Crear los menús para cada paquete
-                JMenu menuA = new JMenu("Editor de Texto Interactivo");
-
-                // Crear los elementos del menú para "Editor de Texto Interactivo"
-                JMenuItem itemNuevo = new JMenuItem("Nuevo Documento");
-                JMenuItem itemGuardar = new JMenuItem("Guardar Documento");
-                JMenuItem itemAbrir = new JMenuItem("Abrir Documento");
-
-                // Agregar ActionListener a los elementos del menú
-                itemNuevo.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        // Código para crear un nuevo documento
-                        EditorTextoGUI editorTextoGUI = new EditorTextoGUI();
-                        editorTextoGUI.setVisible(true);
-                    }
-                });
-
-                itemGuardar.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        // Código para guardar el documento actual
-                        // Necesitarás una referencia al documento actual para hacer esto
-                    }
-                });
-
-                itemAbrir.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        // Código para abrir un documento existente
-                        // Necesitarás una referencia al documento actual para hacer esto
-                    }
-                });
-
-                // Agregar los elementos del menú a "Editor de Texto Interactivo"
-                menuA.add(itemNuevo);
-                menuA.add(itemGuardar);
-                menuA.add(itemAbrir);            }
+                EditorTextoGUI editorTextoGUI = new EditorTextoGUI();
+                editorTextoGUI.setVisible(true);
+            }
         });
+        menuA.add(item1);
 
-        menuB.addActionListener(new ActionListener() {
+        JMenuItem item2 = new JMenuItem("Comparador y Contador de Contenido");
+        item2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Crear los elementos del menú para "Comparador y Contador de Contenido"
-                JMenuItem itemComparar = new JMenuItem("Comparar Contenido");
-                JMenuItem itemContar = new JMenuItem("Contar Contenido");
-
-                // Agregar ActionListener a los elementos del menú
-                itemComparar.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        // Código para comparar contenido
-                        ComparadorContenidoGUI comparadorContenidoGUI = new ComparadorContenidoGUI();
-                        comparadorContenidoGUI.setVisible(true);
-                    }
-                });
-
-                itemContar.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        // Código para contar contenido
-                        // Necesitarás una referencia al contenido actual para hacer esto
-                    }
-                });
-
-                // Agregar los elementos del menú a "Comparador y Contador de Contenido"
-                menuB.add(itemComparar);
-                menuB.add(itemContar);
+                ComparadorContenidoGUI comparadorContenidoGUI = new ComparadorContenidoGUI();
+                comparadorContenidoGUI.setVisible(true);
             }
         });
 
-        menuC.addActionListener(new ActionListener() {
+        JMenuItem item3 = new JMenuItem("Búsqueda y Gestión");
+        item3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-            // Crear los elementos del menú para "Búsqueda y Gestión"
-                JMenuItem itemBuscar = new JMenuItem("Buscar Palabras");
-                JMenuItem itemGestionar = new JMenuItem("Gestionar Contactos");
-
-            // Agregar ActionListener a los elementos del menú
-                itemBuscar.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        // Código para buscar palabras
-                        BuscadorPalabrasGUI buscadorPalabrasGUI = new BuscadorPalabrasGUI();
-                        buscadorPalabrasGUI.setVisible(true);
-                    }
-                });
-
-                itemGestionar.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        // Código para gestionar contactos
-                        // Necesitarás una referencia a la agenda de contactos para hacer esto
-                    }
-                });
-
-            // Agregar los elementos del menú a "Búsqueda y Gestión"
-                menuC.add(itemBuscar);
-                menuC.add(itemGestionar);            }
+                BuscadorPalabrasGUI buscadorPalabrasGUI = new BuscadorPalabrasGUI();
+                buscadorPalabrasGUI.setVisible(true);
+            }
         });
 
-        menuD.addActionListener(new ActionListener() {
+        JMenuItem item4 = new JMenuItem("Interfaz Gráfica Avanzada");
+        item4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-            // Crear los elementos del menú para "Interfaz Gráfica Avanzada"
-                JMenuItem itemSeguimientoRaton = new JMenuItem("Seguimiento del Ratón");
-                JMenuItem itemBarraDesplazamiento = new JMenuItem("Barra de Desplazamiento Interactiva");
-                JMenuItem itemHerramientaDibujo = new JMenuItem("Herramienta de Dibujo");
-
-            // Agregar ActionListener a los elementos del menú
-                itemSeguimientoRaton.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        // Código para mostrar la funcionalidad de seguimiento del ratón
-                        SeguimientoRatón seguimientoRatón = new SeguimientoRatón();
-                        seguimientoRatón.setVisible(true);
-                    }
-                });
-
-                itemBarraDesplazamiento.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        // Código para mostrar la funcionalidad de la barra de desplazamiento interactiva
-                        BarraDesplazamientoInteractiva barraDesplazamientoInteractiva = new BarraDesplazamientoInteractiva();
-                        barraDesplazamientoInteractiva.setVisible(true);
-                    }
-                });
-
-                itemHerramientaDibujo.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        // Código para mostrar la funcionalidad de la herramienta de dibujo
-                        HerramientaDibujo herramientaDibujo = new HerramientaDibujo();
-                        herramientaDibujo.setVisible(true);
-                    }
-                });
-
-            // Agregar los elementos del menú a "Interfaz Gráfica Avanzada"
-                menuD.add(itemSeguimientoRaton);
-                menuD.add(itemBarraDesplazamiento);
-                menuD.add(itemHerramientaDibujo);            }
+                MainFrame mainFrame = new MainFrame();
+                mainFrame.setVisible(true);
+            }
         });
 
-        menuE.addActionListener(new ActionListener() {
+        JMenuItem item5 = new JMenuItem("Validación y Diseño");
+        item5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-            // Crear los elementos del menú para "Validación y Diseño"
-                JMenuItem itemValidarEmail = new JMenuItem("Validar Email");
-                JMenuItem itemHerramientaDibujo = new JMenuItem("Herramienta de Dibujo");
-
-            // Agregar ActionListener a los elementos del menú
-                itemValidarEmail.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        // Código para validar email
-                        ValidadorEmail validadorEmail = new ValidadorEmail();
-                        validadorEmail.setVisible(true);
-                    }
-                });
-
-                itemHerramientaDibujo.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        // Código para mostrar la funcionalidad de la herramienta de dibujo
-                        HerramientaDibujo herramientaDibujo = new HerramientaDibujo();
-                        herramientaDibujo.setVisible(true);
-                    }
-                });
-
-            // Agregar los elementos del menú a "Validación y Diseño"
-                menuE.add(itemValidarEmail);
-                menuE.add(itemHerramientaDibujo);            }
+                ValidadorEmail validadorEmail = new ValidadorEmail();
+                validadorEmail.setVisible(true);
+            }
         });
+
+        // Agregar los elementos del menú al menú correspondiente
+        menuA.add(item1);
+        menuB.add(item2);
+        menuC.add(item3);
+        menuD.add(item4);
+        menuE.add(item5);
     }
+
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
