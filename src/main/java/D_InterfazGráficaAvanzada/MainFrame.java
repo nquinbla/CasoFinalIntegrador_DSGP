@@ -40,7 +40,7 @@ public class MainFrame extends JFrame {
 
         JLabel subtitulo2 = new JLabel("Estructuras de datos");
         subtitulo2.setFont(new Font("Touch Me Sans Petite Semi Bold", Font.PLAIN, 24));
-        subtitulo2.setForeground(Color.BLACK);
+        subtitulo2.setForeground(Color.BLUE);
         subtitulo2.setBounds(520, 570, 300, 50); // Establecer la ubicación y el tamaño
         panelPrincipal.add(subtitulo2);
 
