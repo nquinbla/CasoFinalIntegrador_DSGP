@@ -5,6 +5,7 @@ import D_InterfazGráficaAvanzada.*;
 import E_ValidaciónYDiseño.*;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class Main {
 
