@@ -1,7 +1,12 @@
 package D_InterfazGráficaAvanzada;
 
+import A_EditorTextoInteractivo.EditorTextoGUI;
+import B_ComparadorContadorContenido.ComparadorContenidoGUI;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class MainFrame extends JFrame {
 
@@ -52,7 +57,6 @@ public class MainFrame extends JFrame {
         JMenu menuC = new JMenu("Búsqueda y Gestión");
         JMenu menuD = new JMenu("Interfaz Gráfica Avanzada");
         JMenu menuE = new JMenu("Validación y Diseño");
-        // Agregar más menús según sea necesario...
 
         // Agregar los menús a la barra de menú
         menuBar.add(menuA);
@@ -61,10 +65,101 @@ public class MainFrame extends JFrame {
         menuBar.add(menuD);
         menuBar.add(menuE);
 
-        // Establecer la barra de menú en el marco
-        setJMenuBar(menuBar);
-    }
+        menuA.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Crear los menús para cada paquete
+                JMenu menuA = new JMenu("Editor de Texto Interactivo");
 
+                // Crear los elementos del menú para "Editor de Texto Interactivo"
+                JMenuItem itemNuevo = new JMenuItem("Nuevo Documento");
+                JMenuItem itemGuardar = new JMenuItem("Guardar Documento");
+                JMenuItem itemAbrir = new JMenuItem("Abrir Documento");
+
+                // Agregar ActionListener a los elementos del menú
+                itemNuevo.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        // Código para crear un nuevo documento
+                        EditorTextoGUI editorTextoGUI = new EditorTextoGUI();
+                        editorTextoGUI.setVisible(true);
+                    }
+                });
+
+                itemGuardar.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        // Código para guardar el documento actual
+                        // Necesitarás una referencia al documento actual para hacer esto
+                    }
+                });
+
+                itemAbrir.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        // Código para abrir un documento existente
+                        // Necesitarás una referencia al documento actual para hacer esto
+                    }
+                });
+
+                // Agregar los elementos del menú a "Editor de Texto Interactivo"
+                menuA.add(itemNuevo);
+                menuA.add(itemGuardar);
+                menuA.add(itemAbrir);            }
+        });
+
+        menuB.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+// Crear los elementos del menú para "Comparador y Contador de Contenido"
+                JMenuItem itemComparar = new JMenuItem("Comparar Contenido");
+                JMenuItem itemContar = new JMenuItem("Contar Contenido");
+
+// Agregar ActionListener a los elementos del menú
+                itemComparar.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        // Código para comparar contenido
+                        ComparadorContenidoGUI comparadorContenidoGUI = new ComparadorContenidoGUI();
+                        comparadorContenidoGUI.setVisible(true);
+                    }
+                });
+
+                itemContar.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        // Código para contar contenido
+                        // Necesitarás una referencia al contenido actual para hacer esto
+                    }
+                });
+
+                // Agregar los elementos del menú a "Comparador y Contador de Contenido"
+                menuB.add(itemComparar);
+                menuB.add(itemContar);
+            }
+        });
+
+        menuC.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Código para mostrar las opciones de Búsqueda y Gestión
+            }
+        });
+
+        menuD.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Código para mostrar las opciones de Interfaz Gráfica Avanzada
+            }
+        });
+
+        menuE.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Código para mostrar las opciones de Validación y Diseño
+            }
+        });
+    }
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
