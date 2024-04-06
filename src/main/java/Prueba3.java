@@ -109,4 +109,17 @@ public class Prueba3 extends JFrame {
         menuInterfazGrafica.add(itemInterfazGrafica
         );
     }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            try {
+                Prueba3 frame = new Prueba3();
+                frame.setVisible(true);
+            } catch (Exception e) {
+                // Manejo de excepciones
+                JOptionPane.showMessageDialog(null, "Ha ocurrido un error al iniciar la aplicación.", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        });
+
     }
+}
