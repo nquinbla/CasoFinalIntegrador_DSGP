@@ -42,6 +42,27 @@ public class MainFrame extends JFrame {
         JLabel logoLabel = new JLabel(logoIcon);
         logoLabel.setBounds(50, 450, logoIcon.getIconWidth(), logoIcon.getIconHeight()); // Establecer la ubicación y el tamaño
         panelPrincipal.add(logoLabel);
+
+        // Crear la barra de menú
+        JMenuBar menuBar = new JMenuBar();
+
+        // Crear los menús para cada paquete
+        JMenu menuA = new JMenu("Editor de Texto Interactivo");
+        JMenu menuB = new JMenu("Comparador y Contador de Contenido");
+        JMenu menuC = new JMenu("Búsqueda y Gestión");
+        JMenu menuD = new JMenu("Interfaz Gráfica Avanzada");
+        JMenu menuE = new JMenu("Validación y Diseño");
+        // Agregar más menús según sea necesario...
+
+        // Agregar los menús a la barra de menú
+        menuBar.add(menuA);
+        menuBar.add(menuB);
+        menuBar.add(menuC);
+        menuBar.add(menuD);
+        menuBar.add(menuE);
+
+        // Establecer la barra de menú en el marco
+        setJMenuBar(menuBar);
     }
 
     public static void main(String[] args) {
@@ -53,3 +74,4 @@ public class MainFrame extends JFrame {
         });
     }
 }
+
