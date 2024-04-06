@@ -2,6 +2,7 @@ package D_InterfazGráficaAvanzada;
 
 import A_EditorTextoInteractivo.EditorTextoGUI;
 import B_ComparadorContadorContenido.ComparadorContenidoGUI;
+import C_BúsquedaYGestión.BuscadorPalabrasGUI;
 
 import javax.swing.*;
 import java.awt.*;
@@ -142,8 +143,31 @@ public class MainFrame extends JFrame {
         menuC.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Código para mostrar las opciones de Búsqueda y Gestión
-            }
+// Crear los elementos del menú para "Búsqueda y Gestión"
+                JMenuItem itemBuscar = new JMenuItem("Buscar Palabras");
+                JMenuItem itemGestionar = new JMenuItem("Gestionar Contactos");
+
+// Agregar ActionListener a los elementos del menú
+                itemBuscar.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        // Código para buscar palabras
+                        BuscadorPalabrasGUI buscadorPalabrasGUI = new BuscadorPalabrasGUI();
+                        buscadorPalabrasGUI.setVisible(true);
+                    }
+                });
+
+                itemGestionar.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        // Código para gestionar contactos
+                        // Necesitarás una referencia a la agenda de contactos para hacer esto
+                    }
+                });
+
+// Agregar los elementos del menú a "Búsqueda y Gestión"
+                menuC.add(itemBuscar);
+                menuC.add(itemGestionar);            }
         });
 
         menuD.addActionListener(new ActionListener() {
