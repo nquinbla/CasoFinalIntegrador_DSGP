@@ -6,7 +6,7 @@ import java.awt.*;
 public class MainFrame extends JFrame {
 
     public MainFrame() {
-        setTitle("Mi Aplicación UAX");
+        setTitle("Sistema de Gestión de Publicaciones de la Universidad Alfonso X el Sabio (UAX)");
         setSize(800, 600);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         getContentPane().setBackground(Color.WHITE); // Establece el color de fondo del marco principal
