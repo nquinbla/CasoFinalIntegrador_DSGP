@@ -3,6 +3,7 @@ package D_InterfazGráficaAvanzada;
 import A_EditorTextoInteractivo.EditorTextoGUI;
 import B_ComparadorContadorContenido.ComparadorContenidoGUI;
 import C_BúsquedaYGestión.BuscadorPalabrasGUI;
+import E_ValidaciónYDiseño.HerramientaDibujo;
 
 import javax.swing.*;
 import java.awt.*;
@@ -173,8 +174,43 @@ public class MainFrame extends JFrame {
         menuD.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Código para mostrar las opciones de Interfaz Gráfica Avanzada
-            }
+// Crear los elementos del menú para "Interfaz Gráfica Avanzada"
+                JMenuItem itemSeguimientoRaton = new JMenuItem("Seguimiento del Ratón");
+                JMenuItem itemBarraDesplazamiento = new JMenuItem("Barra de Desplazamiento Interactiva");
+                JMenuItem itemHerramientaDibujo = new JMenuItem("Herramienta de Dibujo");
+
+// Agregar ActionListener a los elementos del menú
+                itemSeguimientoRaton.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        // Código para mostrar la funcionalidad de seguimiento del ratón
+                        SeguimientoRatón seguimientoRatón = new SeguimientoRatón();
+                        seguimientoRatón.setVisible(true);
+                    }
+                });
+
+                itemBarraDesplazamiento.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        // Código para mostrar la funcionalidad de la barra de desplazamiento interactiva
+                        BarraDesplazamientoInteractiva barraDesplazamientoInteractiva = new BarraDesplazamientoInteractiva();
+                        barraDesplazamientoInteractiva.setVisible(true);
+                    }
+                });
+
+                itemHerramientaDibujo.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        // Código para mostrar la funcionalidad de la herramienta de dibujo
+                        HerramientaDibujo herramientaDibujo = new HerramientaDibujo();
+                        herramientaDibujo.setVisible(true);
+                    }
+                });
+
+// Agregar los elementos del menú a "Interfaz Gráfica Avanzada"
+                menuD.add(itemSeguimientoRaton);
+                menuD.add(itemBarraDesplazamiento);
+                menuD.add(itemHerramientaDibujo);            }
         });
 
         menuE.addActionListener(new ActionListener() {
