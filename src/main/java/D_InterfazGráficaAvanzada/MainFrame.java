@@ -38,8 +38,9 @@ public class MainFrame extends JFrame {
         panelPrincipal.add(subtitulo2);
 
         // Logo de la Universidad UAX
-        JLabel logoLabel = new JLabel(new ImageIcon("logoUAX.png"));
-        logoLabel.setBounds(50, 450, 200, 100); // Establecer la ubicación y el tamaño
+        ImageIcon logoIcon = new ImageIcon("\"C:\\Users\\nerea\\OneDrive\\Imágenes\\logoUAX.png\""); // Reemplaza "ruta/del/logoUAX.png" con la ruta real de tu imagen
+        JLabel logoLabel = new JLabel(logoIcon);
+        logoLabel.setBounds(50, 450, logoIcon.getIconWidth(), logoIcon.getIconHeight()); // Establecer la ubicación y el tamaño
         panelPrincipal.add(logoLabel);
     }
 
