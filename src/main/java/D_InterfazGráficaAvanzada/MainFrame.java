@@ -114,11 +114,11 @@ public class MainFrame extends JFrame {
         menuB.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-// Crear los elementos del menú para "Comparador y Contador de Contenido"
+                // Crear los elementos del menú para "Comparador y Contador de Contenido"
                 JMenuItem itemComparar = new JMenuItem("Comparar Contenido");
                 JMenuItem itemContar = new JMenuItem("Contar Contenido");
 
-// Agregar ActionListener a los elementos del menú
+                // Agregar ActionListener a los elementos del menú
                 itemComparar.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
