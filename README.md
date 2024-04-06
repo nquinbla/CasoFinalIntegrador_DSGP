@@ -1,31 +1,32 @@
 # Caso Final Integrador: Desarrollo de un Sistema de Gestión de Publicaciones
-Caso Final Integrador: Desarrollo de un Sistema de Gestión de Publicaciones de Nerea Quintanilla Blanco
+Caso Final Integrador: Desarrollo de un Sistema de Gestión de Publicaciones de Nerea Quintanilla Blanco, los respectivos ejercicios se sitúan tras su explicación en corchetes.
 LINK: https://github.com/nquinbla/CasoFinalIntegrador_Publicaciones.git
 
 ## DESCRIPCIÓN
- 
+ Programa donde
 
 ## MÓDULO
  ### 1. Editor de Texto Interactivo (Ejercicio 1 y 2)
-  * Creación y Almacenamiento: Desarrollar una interfaz gráfica donde los usuarios puedan escribir y editar textos, con la opción de guardarlos en un archivo.
-  * Navegación y Listado: Implementar una funcionalidad que permita a los usuarios ver una lista de sus documentos y seleccionar cualquiera para visualizar o continuar editando.
+  * Creación y Almacenamiento: Desarrollar una interfaz gráfica donde los usuarios puedan escribir y editar textos, con la opción de guardarlos en un archivo -> [EditorTextoGUI]
+  * Navegación y Listado: Implementar una funcionalidad que permita a los usuarios ver una lista de sus documentos y seleccionar cualquiera para visualizar o continuar editando -> [Documento]
     
-### 2. Comprador y Contador de Contenido (Ejercicio 3 y 4)
-  * Herramienta de Comparación: Crear una función que permita a los usuarios seleccionar y comparar dos archivos para verificar si son iguales o encontrar diferencias.
-  * Análisis de Texto: Desarrollar una herramienta que cuente el número de palabras en un documento y ofrezca estadísticas de uso para ayudar en la edición y el mejoramiento del texto.
+### 2. Comprador y Contador de Contenido (Ejercicio 3 y 4) 
+  * Herramienta de Comparación: Crear una función que permita a los usuarios seleccionar y comparar dos archivos para verificar si son iguales o encontrar diferencias -> [ComparadorContenido]
+  * Análisis de Texto: Desarrollar una herramienta que cuente el número de palabras en un documento y ofrezca estadísticas de uso para ayudar en la edición y el mejoramiento del texto -> [AnálisisTexto]
+  * Ejecución -> [ComparadorContenidoGUI]
 
 ### 3. Búsqueda de Palabras y Gestión de Contactos (Ejercicios 5 y 6):
-  * Buscador de Palabras: Incorporar una función que permita a los usuarios buscar cuántas veces aparece una palabra específica en un documento.
-  * Agenda de Contactos: Crear una sección en la aplicación donde los usuarios puedan guardar y gestionar contactos (otros escritores, editores, etc.), con detalles como nombre, e-mail y número de teléfono.
+  * Buscador de Palabras: Incorporar una función que permita a los usuarios buscar cuántas veces aparece una palabra específica en un documento -> [BuscadorPalabras] & [BuscadorPalabrasGUI]
+  * Agenda de Contactos: Crear una sección en la aplicación donde los usuarios puedan guardar y gestionar contactos (otros escritores, editores, etc.), con detalles como nombre, e-mail y número de teléfono -> [AgendaContactos] & [Contactos]
 
 ### 4. Interfaz Gráfica Avanzada (Ejercicios 7, 8 y 9):
-  * Multiplicidad de Ventanas: Implementar un sistema de ventanas múltiples que permita a los usuarios trabajar con varios documentos al mismo tiempo.
-  * Seguimiento del Ratón: Integrar etiquetas que muestren la posición del ratón en tiempo real mientras el usuario trabaja.
-  * Barra de Desplazamiento Interactiva: Añadir una barra de desplazamiento que muestre el progreso del documento y permita a los usuarios saltar a diferentes secciones de forma intuitiva.
+  * Multiplicidad de Ventanas: Implementar un sistema de ventanas múltiples que permita a los usuarios trabajar con varios documentos al mismo tiempo -> [VentanaDocumento] & [VentanaPrincipal]
+  * Seguimiento del Ratón: Integrar etiquetas que muestren la posición del ratón en tiempo real mientras el usuario trabaja -> [SeguimientoRatón]
+  * Barra de Desplazamiento Interactiva: Añadir una barra de desplazamiento que muestre el progreso del documento y permita a los usuarios saltar a diferentes secciones de forma intuitiva -> [BarraDesplazamientoInteractiva]
 
 ### 5. Validación de E-mail y Diseño Gráfico (Ejercicios 10 y 11):
-  * Validador de E-mail: Desarrollar un sistema que verifique en tiempo real si el texto introducido en un campo es un e-mail válido, mostrando un indicador visual de validación.
-  * Herramienta de Dibujo: Crear una función simple de dibujo que permita a los usuarios esbozar ideas o diagramas que puedan acompañar sus textos.
+  * Validador de E-mail: Desarrollar un sistema que verifique en tiempo real si el texto introducido en un campo es un e-mail válido, mostrando un indicador visual de validación -> [ValidadorEmail]
+  * Herramienta de Dibujo: Crear una función simple de dibujo que permita a los usuarios esbozar ideas o diagramas que puedan acompañar sus textos -> [HerramientaDibujo]
 
 
 ## ENTREGABLES
