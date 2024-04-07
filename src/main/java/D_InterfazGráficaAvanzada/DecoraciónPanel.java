@@ -14,9 +14,6 @@ public class DecoraciónPanel extends JPanel {
         g2d.setColor(Color.BLUE);
         g2d.drawLine(width / 3, 0, 0, height);
 
-        // Dibujar la segunda línea inclinada de derecha a izquierda
-        g2d.setColor(Color.BLUE);
-        g2d.drawLine(width * 2 / 3, 0, width, height);
 
         // Dibujar un triángulo entre las dos líneas
         int[] xPoints = {0, width / 3, width * 2 / 3}; // Coordenadas x de los puntos del triángulo
