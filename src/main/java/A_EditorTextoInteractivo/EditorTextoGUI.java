@@ -9,6 +9,7 @@ public class EditorTextoGUI extends JFrame {
     private JTextArea textArea;
     private JFileChooser fileChooser;
 
+    // Constructor
     public EditorTextoGUI() {
         setTitle("---- Editor de texto interactivo ----");
         setSize(800, 600);
@@ -23,6 +24,7 @@ public class EditorTextoGUI extends JFrame {
         JMenuItem menuItemGuardar = new JMenuItem("Guardar");
         JMenuItem menuItemAbrir = new JMenuItem("Abrir");
 
+        // Eventos
         menuItemGuardar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -44,6 +46,7 @@ public class EditorTextoGUI extends JFrame {
 
     }
 
+    // Métodos
     private void guardarArchivo() {
         fileChooser = new JFileChooser();
         int seleccion = fileChooser.showSaveDialog(this);
