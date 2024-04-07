@@ -2,6 +2,7 @@ package D_InterfazGráficaAvanzada;
 
 import A_EditorTextoInteractivo.EditorTextoGUI;
 import B_ComparadorContadorContenido.ComparadorContenidoGUI;
+import C_BúsquedaYGestión.AgendaContactosGUI;
 import C_BúsquedaYGestión.BuscadorPalabrasGUI;
 
 import javax.swing.*;
@@ -127,6 +128,16 @@ public class MainFrame extends JFrame {
             }
         });
         menuBusquedaGestion.add(itemBusquedaGestion);
+
+        JMenuItem itemAgendaContactos = new JMenuItem("Agenda de Contactos");
+        itemAgendaContactos.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AgendaContactosGUI agendaContactosGUI = new AgendaContactosGUI();
+                agendaContactosGUI.setVisible(true);
+            }
+        });
+        menuBusquedaGestion.add(itemAgendaContactos);
 
         JMenuItem itemInterfazGrafica = new JMenuItem("Interfaz Gráfica Avanzada");
         itemInterfazGrafica.addActionListener(new ActionListener() {

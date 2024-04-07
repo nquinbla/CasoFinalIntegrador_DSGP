@@ -34,15 +34,5 @@ public class AgendaContactos {
         return resultados;
     }
 
-    // Método que busca un contacto por nombre
-    public List<Contacto> buscarContactoPorTelefono(String telefono) {
-        List<Contacto> resultados = new ArrayList<>();
-        for (Contacto contacto : contactos) {
-            if (contacto.getTelefono().equalsIgnoreCase(telefono)) {
-                resultados.add(contacto);
-            }
-        }
-        return resultados;
-    }
 }
 
