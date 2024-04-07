@@ -1,7 +1,13 @@
 package D_InterfazGráficaAvanzada;
 
+import A_EditorTextoInteractivo.EditorTextoGUI;
+import B_ComparadorContadorContenido.ComparadorContenidoGUI;
+import C_BúsquedaYGestión.BuscadorPalabrasGUI;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class MainFrame extends JFrame {
 
@@ -71,14 +77,65 @@ public class MainFrame extends JFrame {
         JLabel logoLabel = new JLabel(newLogoIcon);
         panelLogo.add(logoLabel);
 
-    }
+        // Crear la barra de menú
+        JMenuBar menuBar = new JMenuBar();
 
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                MainFrame frame = new MainFrame();
-                frame.setVisible(true);
+        // Crear los menús para cada paquete
+        JMenu menuEditorTexto = new JMenu("Editor de Texto Interactivo");
+        JMenu menuComparadorContador = new JMenu("Comparador y Contador de Contenido");
+        JMenu menuBusquedaGestion = new JMenu("Búsqueda y Gestión");
+        JMenu menuInterfazGrafica = new JMenu("Interfaz Gráfica Avanzada");
+        JMenu menuValidacionDiseno = new JMenu("Validación y Diseño");
+
+        // Agregar los menús a la barra de menú
+        menuBar.add(menuEditorTexto);
+        menuBar.add(menuComparadorContador);
+        menuBar.add(menuBusquedaGestion);
+        menuBar.add(menuInterfazGrafica);
+        menuBar.add(menuValidacionDiseno);
+
+        // Agregar la barra de menú al marco principal
+        setJMenuBar(menuBar);
+
+        // Configurar la acción de los elementos del menú para cada módulo
+        JMenuItem itemEditorTexto = new JMenuItem("Editor de Texto Interactivo");
+        itemEditorTexto.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                EditorTextoGUI editorTextoGUI = new EditorTextoGUI();
+                editorTextoGUI.setVisible(true);
             }
         });
+        menuEditorTexto.add(itemEditorTexto);
+
+        JMenuItem itemComparadorContador = new JMenuItem("Comparador y Contador de Contenido");
+        itemComparadorContador.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ComparadorContenidoGUI comparadorContenidoGUI = new ComparadorContenidoGUI();
+                comparadorContenidoGUI.setVisible(true);
+            }
+        });
+        menuComparadorContador.add(itemComparadorContador);
+
+        JMenuItem itemBusquedaGestion = new JMenuItem("Búsqueda y Gestión");
+        itemBusquedaGestion.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                BuscadorPalabrasGUI buscadorPalabrasGUI = new BuscadorPalabrasGUI();
+                buscadorPalabrasGUI.setVisible(true);
+            }
+        });
+        menuBusquedaGestion.add(itemBusquedaGestion);
+
+        JMenuItem itemInterfazGrafica = new JMenuItem("Interfaz Gráfica Avanzada");
+        itemInterfazGrafica.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Aquí puedes abrir una nueva ventana para la Interfaz Gráfica Avanzada
+            }
+        });
+        menuInterfazGrafica.add(itemInterfazGrafica
+        );
     }
 }
