@@ -28,6 +28,8 @@ LINK: https://github.com/nquinbla/CasoFinalIntegrador_Publicaciones.git
   * Validador de E-mail: Desarrollar un sistema que verifique en tiempo real si el texto introducido en un campo es un e-mail válido, mostrando un indicador visual de validación -> [ValidadorEmail]
   * Herramienta de Dibujo: Crear una función simple de dibujo que permita a los usuarios esbozar ideas o diagramas que puedan acompañar sus textos -> [HerramientaDibujo]
 
+### EXTRAS
+Además contamos con algunas clases más como el Mainframe [Mainframe.java] en el cuál tenemos todo lo que se debería de ejecutar en el Main, y el DecoraciónPanel, donde hemos decorado la ventana principal con títulos y colores.
 
 ## ENTREGABLES
 * Aplicación de Gestión de Publicaciones: Un software interactivo que integre todas las funcionalidades mencionadas con una interfaz de usuario gráfica y amigable.
