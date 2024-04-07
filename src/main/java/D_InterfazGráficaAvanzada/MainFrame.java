@@ -99,6 +99,7 @@ public class MainFrame extends JFrame {
         setJMenuBar(menuBar);
 
         // Configurar la acción de los elementos del menú para cada módulo
+        // Editor de Texto Interactivo
         JMenuItem itemEditorTexto = new JMenuItem("Editor de Texto Interactivo");
         itemEditorTexto.addActionListener(new ActionListener() {
             @Override
@@ -109,6 +110,7 @@ public class MainFrame extends JFrame {
         });
         menuEditorTexto.add(itemEditorTexto);
 
+        // Comparador y Contador de Contenido
         JMenuItem itemComparadorContador = new JMenuItem("Comparador y Contador de Contenido");
         itemComparadorContador.addActionListener(new ActionListener() {
             @Override
@@ -119,6 +121,7 @@ public class MainFrame extends JFrame {
         });
         menuComparadorContador.add(itemComparadorContador);
 
+        // Búsqueda y Gestión
         JMenuItem itemBusquedaGestion = new JMenuItem("Búsqueda y Gestión");
         itemBusquedaGestion.addActionListener(new ActionListener() {
             @Override
@@ -129,6 +132,7 @@ public class MainFrame extends JFrame {
         });
         menuBusquedaGestion.add(itemBusquedaGestion);
 
+        // Agenda de Contactos
         JMenuItem itemAgendaContactos = new JMenuItem("Agenda de Contactos");
         itemAgendaContactos.addActionListener(new ActionListener(){
             @Override
@@ -139,6 +143,7 @@ public class MainFrame extends JFrame {
         });
         menuBusquedaGestion.add(itemAgendaContactos);
 
+        // Validador de Email
         JMenuItem itemValidorEmail = new JMenuItem("Validador de Email");
         itemValidorEmail.addActionListener(new ActionListener() {
             @Override
@@ -149,6 +154,7 @@ public class MainFrame extends JFrame {
         });
         menuValidacionDiseno.add(itemValidorEmail);
 
+        // Herramienta de Dibujo
         JMenuItem itemHerramientaDibujo = new JMenuItem("Herramienta de Dibujo");
         itemHerramientaDibujo.addActionListener(new ActionListener() {
             @Override
@@ -157,5 +163,6 @@ public class MainFrame extends JFrame {
                 herramientaDibujo.setVisible(true);
             }
         });
+        menuValidacionDiseno.add(itemHerramientaDibujo);
     }
 }
