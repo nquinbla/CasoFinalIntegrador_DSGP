@@ -13,19 +13,22 @@ import java.awt.event.ActionListener;
 
 public class MainFrame extends JFrame {
 
-    // Personalización de colores para decorar :)
-    Color colorMarcoPrincipal = new Color(110, 180, 250, 98); // Azul raro
 
     public MainFrame() {
+
+        // Personalización de colores para decorar :)
+        Color colorMarcoPrincipal = new Color(110, 180, 250, 98); // Azul raro
+        getContentPane().setBackground(colorMarcoPrincipal); // Establece el color de fondo del marco principal
+
         setTitle("Sistema de Gestión de Publicaciones de la Universidad Alfonso X el Sabio (UAX)");
         setSize(800, 600);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        getContentPane().setBackground(colorMarcoPrincipal); // Establece el color de fondo del marco principal
 
         // Configurar el diseño del marco principal
         JPanel panelPrincipal = new JPanel();
         panelPrincipal.setLayout(null); // Usar un layout nulo
         panelPrincipal.setBackground(Color.WHITE);
+        panelPrincipal.setOpaque(false); // Hacer que panelPrincipal sea transparente
         add(panelPrincipal);
 
         // Título Principal "UAX"
