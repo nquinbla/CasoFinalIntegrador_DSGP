@@ -10,16 +10,16 @@ public class DecoraciónPanel extends JPanel {
         int width = getWidth();
         int height = getHeight();
 
-        // Dibujar la mitad izquierda azul
+        // Dibujar el rectángulo azul en la mitad izquierda
         g2d.setColor(Color.BLUE);
         g2d.fillRect(0, 0, width / 2, height);
 
-        // Dibujar la mitad derecha blanca
+        // Dibujar el rectángulo blanco en la mitad derecha
         g2d.setColor(Color.WHITE);
         g2d.fillRect(width / 2, 0, width / 2, height);
 
-        // Dibujar la línea inclinada
+        // Dibujar la línea inclinada para delimitar los colores
         g2d.setColor(Color.BLACK);
-        g2d.drawLine(0, 0, width, height);
+        g2d.drawLine(width / 1, 0, 0, height); // Línea inclinada de izquierda a derecha
     }
 }
