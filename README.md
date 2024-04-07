@@ -3,7 +3,7 @@ Caso Final Integrador: Desarrollo de un Sistema de Gestión de Publicaciones de 
 LINK: https://github.com/nquinbla/CasoFinalIntegrador_Publicaciones.git
 
 ## DESCRIPCIÓN
- Programa donde
+ Un programadonde al iniciarse lo primero que ves es la pantalla inciial. Aparece el título de la UAX con los subtítulos de la universidad y de la asignatura correspondiente, acompañados de un fondo azul claro combiando con formas geométricas más oscuras, también aparece el logo de la universidad. DEntro podemos ejecutar cinco tipos de porgramas explicados más adelante donde podremos editar un texto y guardarlo, abrir un archivo txt y cambiarelo, comparar dos archivos, buscar palabras en un texto, validar email, etc.
 
 ## MÓDULO
  ### 1. Editor de Texto Interactivo (Ejercicio 1 y 2)
@@ -28,6 +28,8 @@ LINK: https://github.com/nquinbla/CasoFinalIntegrador_Publicaciones.git
   * Validador de E-mail: Desarrollar un sistema que verifique en tiempo real si el texto introducido en un campo es un e-mail válido, mostrando un indicador visual de validación -> [ValidadorEmail]
   * Herramienta de Dibujo: Crear una función simple de dibujo que permita a los usuarios esbozar ideas o diagramas que puedan acompañar sus textos -> [HerramientaDibujo]
 
+### EXTRAS
+Además contamos con algunas clases más como el Mainframe [Mainframe.java] en el cuál tenemos todo lo que se debería de ejecutar en el Main, y el DecoraciónPanel, donde hemos decorado la ventana principal con títulos y colores.
 
 ## ENTREGABLES
 * Aplicación de Gestión de Publicaciones: Un software interactivo que integre todas las funcionalidades mencionadas con una interfaz de usuario gráfica y amigable.
