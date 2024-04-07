@@ -17,13 +17,24 @@ public class MainFrame extends JFrame {
         setTitle("Sistema de Gestión de Publicaciones de la Universidad Alfonso X el Sabio (UAX)");
         setSize(800, 600);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        getContentPane().setBackground(Color.WHITE); // Establece el color de fondo del marco principal
 
         // Configurar el diseño del marco principal
-        JPanel panelPrincipal = new JPanel();
-        panelPrincipal.setLayout(null); // Usar un layout nulo
-        panelPrincipal.setBackground(Color.WHITE);
-        add(panelPrincipal);
+        JPanel panelPrincipal = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                int width = getWidth();
+                int height = getHeight();
+
+                // Dibuja el triángulo azul
+                g.setColor(Color.BLUE);
+                g.fillPolygon(new int[] {0, 0, width}, new int[] {0, height, 0}, 3);
+
+                // Dibuja el triángulo blanco
+                g.setColor(Color.WHITE);
+                g.fillPolygon(new int[] {0, width, width}, new int[] {height, 0, height}, 3);
+            }
+        };
 
         // Título Principal "UAX"
         JLabel tituloPrincipal = new JLabel("<html><font color='grey'>U</font><font color='grey'>A</font><font color='blue'>X</font></html>");        tituloPrincipal.setFont(new Font("Ardela Edge ARDELA EDGE X03 Extra Bold", Font.PLAIN, 142));
@@ -45,7 +56,7 @@ public class MainFrame extends JFrame {
         panelPrincipal.add(subtitulo2);
 
         // Logo de la Universidad UAX
-        ImageIcon logoIcon = new ImageIcon("\"C:\\Users\\nerea\\OneDrive\\Imágenes\\logoUAX.png\""); // Reemplaza "ruta/del/logoUAX.png" con la ruta real de tu imagen
+        ImageIcon logoIcon = new ImageIcon("\"C:\\Users\\nerea\\OneDrive\\Imágenes\\logoUAX.png\"");
         JLabel logoLabel = new JLabel(logoIcon);
         logoLabel.setBounds(50, 450, logoIcon.getIconWidth(), logoIcon.getIconHeight()); // Establecer la ubicación y el tamaño
         panelPrincipal.add(logoLabel);
@@ -133,4 +144,5 @@ public class MainFrame extends JFrame {
             }
         });
     }
+
 }
