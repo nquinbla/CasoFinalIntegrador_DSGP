@@ -21,7 +21,7 @@ public class BuscadorPalabrasGUI extends JFrame {
         JScrollPane scrollPane = new JScrollPane(areaTexto);
 
         campoBusqueda = new JTextField();
-        campoBusqueda.setPreferredSize(new Dimension(500, 50)); // Ajusta el tamaño del campo de búsqueda
+        campoBusqueda.setPreferredSize(new Dimension(500, 25)); // Ajusta el tamaño del campo de búsqueda
         JButton btnBuscar = new JButton("Buscar");
         btnBuscar.addActionListener(new ActionListener() {
             @Override
