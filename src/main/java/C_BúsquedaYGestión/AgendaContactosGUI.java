@@ -100,7 +100,9 @@ public class AgendaContactosGUI extends JFrame {
     }
 
     private void actualizarAreaContactos() {
-        // Aquí puedes implementar un método para actualizar el área de texto con la lista de contactos
-        // Por ejemplo, puedes recorrer todos los contactos en la agenda y agregarlos al área de texto
+        areaContactos.setText(""); // Limpiar el área de texto
+        for (Contacto contacto : agenda.getContactos()) { // Recorrer todos los contactos
+            areaContactos.append(contacto.getNombre() + " - " + contacto.getEmail() + " - " + contacto.getTelefono() + "\n"); // Agregar cada contacto al área de texto
+        }
     }
 }

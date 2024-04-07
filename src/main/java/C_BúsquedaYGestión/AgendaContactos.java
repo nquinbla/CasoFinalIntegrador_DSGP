@@ -5,6 +5,9 @@ import java.util.List;
 
 // Clase que representa una agenda de contactos
 public class AgendaContactos {
+    public List<Contacto> getContactos() {
+        return contactos;
+    }
     private List<Contacto> contactos;
     public AgendaContactos() {contactos = new ArrayList<>();}
     public void agregarContacto(Contacto contacto) {contactos.add(contacto);}
