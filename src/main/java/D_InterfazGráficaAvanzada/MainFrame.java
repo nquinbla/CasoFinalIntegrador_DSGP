@@ -85,14 +85,12 @@ public class MainFrame extends JFrame {
         JMenu menuEditorTexto = new JMenu("Editor de Texto Interactivo");
         JMenu menuComparadorContador = new JMenu("Comparador y Contador de Contenido");
         JMenu menuBusquedaGestion = new JMenu("Búsqueda y Gestión");
-        JMenu menuInterfazGrafica = new JMenu("Interfaz Gráfica Avanzada");
         JMenu menuValidacionDiseno = new JMenu("Validación y Diseño");
 
         // Agregar los menús a la barra de menú
         menuBar.add(menuEditorTexto);
         menuBar.add(menuComparadorContador);
         menuBar.add(menuBusquedaGestion);
-        menuBar.add(menuInterfazGrafica);
         menuBar.add(menuValidacionDiseno);
 
         // Agregar la barra de menú al marco principal
@@ -139,14 +137,12 @@ public class MainFrame extends JFrame {
         });
         menuBusquedaGestion.add(itemAgendaContactos);
 
-        JMenuItem itemInterfazGrafica = new JMenuItem("Interfaz Gráfica Avanzada");
-        itemInterfazGrafica.addActionListener(new ActionListener() {
+        JMenuItem itemValidacionDiseno = new JMenuItem("Validación y Diseño");
+        itemValidacionDiseno.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Aquí puedes abrir una nueva ventana para la Interfaz Gráfica Avanzada
+                // Aquí puedes abrir una nueva ventana para la Validación y Diseño
             }
         });
-        menuInterfazGrafica.add(itemInterfazGrafica
-        );
     }
 }
