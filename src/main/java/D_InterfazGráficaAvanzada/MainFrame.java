@@ -3,8 +3,8 @@ package D_InterfazGráficaAvanzada;
 import A_EditorTextoInteractivo.EditorTextoGUI;
 import B_ComparadorContadorContenido.ComparadorContenidoGUI;
 import C_BúsquedaYGestión.BuscadorPalabrasGUI;
-import E_ValidaciónYDiseño.HerramientaDibujo;
 import E_ValidaciónYDiseño.ValidadorEmail;
+import D_InterfazGráficaAvanzada.DecoraciónPanel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -25,7 +25,7 @@ public class MainFrame extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         // Configurar el diseño del marco principal
-        JPanel panelPrincipal = new JPanel();
+        JPanel panelPrincipal = new DecoraciónPanel(); // Usar un panel personalizado
         panelPrincipal.setLayout(null); // Usar un layout nulo
         panelPrincipal.setBackground(new Color(255, 255, 255, 200)); // Blanco semi-transparente
         panelPrincipal.setOpaque(false); // Hacer que panelPrincipal sea transparente
