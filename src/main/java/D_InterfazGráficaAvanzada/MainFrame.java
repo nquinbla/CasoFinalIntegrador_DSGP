@@ -28,18 +28,18 @@ public class MainFrame extends JFrame {
         GridBagConstraints gbcTitulo = new GridBagConstraints();
         gbcTitulo.gridx = 0;
         gbcTitulo.gridy = 0;
-        gbcTitulo.weighty = 1;
+        gbcTitulo.weighty = 2; // Aumentar el espacio vertical
         gbcTitulo.anchor = GridBagConstraints.PAGE_END;
         panelPrincipal.add(tituloPrincipal, gbcTitulo);
 
-        // Subtítulos "Alfonso X el Sabio" y "Estructuras de datos"
+// Subtítulos "Alfonso X el Sabio" y "Estructuras de datos"
         JLabel subtitulo1 = new JLabel("Universidad Alfonso X el Sabio");
         subtitulo1.setFont(new Font("Touch Me Sans Petite Semi Bold", Font.ITALIC, 24));
         subtitulo1.setForeground(Color.BLACK);
         GridBagConstraints gbcSubtitulo1 = new GridBagConstraints();
         gbcSubtitulo1.gridx = 0;
         gbcSubtitulo1.gridy = 1;
-        gbcSubtitulo1.weighty = 0;
+        gbcSubtitulo1.weighty = 0; // Mantener el espacio vertical
         gbcSubtitulo1.anchor = GridBagConstraints.PAGE_START;
         panelPrincipal.add(subtitulo1, gbcSubtitulo1);
 
@@ -49,7 +49,7 @@ public class MainFrame extends JFrame {
         GridBagConstraints gbcSubtitulo2 = new GridBagConstraints();
         gbcSubtitulo2.gridx = 0;
         gbcSubtitulo2.gridy = 2;
-        gbcSubtitulo2.weighty = 1;
+        gbcSubtitulo2.weighty = 0; // Mantener el espacio vertical
         gbcSubtitulo2.anchor = GridBagConstraints.PAGE_START;
         panelPrincipal.add(subtitulo2, gbcSubtitulo2);
 

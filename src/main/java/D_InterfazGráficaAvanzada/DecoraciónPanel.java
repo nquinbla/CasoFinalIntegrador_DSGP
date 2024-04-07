@@ -21,16 +21,14 @@ public class DecoraciónPanel extends JPanel {
         int d = 225; // Distancia de la nueva línea a la primera
         g2d.drawLine(width / 3 + d, 0 + d, 0 + d, height + d);
 
-        // Dibujar un triángulo entre las dos líneas
-        int[] xPoints = {0, width / 3, width * 2 / 3}; // Coordenadas "x" de los puntos del triángulo
-        int[] yPoints = {height, 0, 0}; // Coordenadas "y" de los puntos del triángulo
-        int nPoints = 3; // Número de puntos del triángulo
+        // Rellenar el espacio entre las dos líneas
+        Color colorRelleno = new Color(54, 121, 250, 98); // Azul semi-transparente
+        g2d.setColor(colorRelleno);
 
-        // Rellenar el triángulo con un color semi-transparente
-        Color colortriángulos = new Color(54, 121, 250, 98); // Azul semi-transparente
-        g2d.setColor(colortriángulos);
-        g2d.fillPolygon(xPoints, yPoints, nPoints); // Dibujar y rellenar el triángulo
-
-
+        // Crear un polígono con los puntos de las dos líneas
+        int[] xPoints = {0, width / 3, width / 3 + d, 0}; // Coordenadas "x" de los puntos del polígono
+        int[] yPoints = {height, 0, d, height + d}; // Coordenadas "y" de los puntos del polígono
+        int nPoints = 4; // Número de puntos del polígono
+        g2d.fillPolygon(xPoints, yPoints, nPoints); // Dibujar y rellenar el polígono
     }
 }
