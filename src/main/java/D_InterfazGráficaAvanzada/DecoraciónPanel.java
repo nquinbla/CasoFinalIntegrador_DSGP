@@ -34,8 +34,8 @@ public class DecoraciónPanel extends JPanel {
 
         // Dibujar las nuevas líneas más finas en el lado derecho
         int d2 = width / 2; // Aumentar la distancia de las nuevas líneas a la izquierda del panel
-        g2d.drawLine(width / 3 + d + d2, 0, d + d2, height); // Primera línea fina
-        g2d.drawLine(width / 3 + d + 2 * d2, 0, d + 2 * d2, height); // Segunda línea fina
+        g2d.drawLine(width / 3 + d + d2, 0, d + d2, height); // Primera línea
+        g2d.drawLine(width / 3 + d + 2 * d2, 0, d + 2 * d2, height); // Segunda línea
 
         // Rellenar el espacio entre las nuevas líneas
         int[] xPoints2 = {width / 3 + d + d2, width / 3 + d + 2 * d2, d + 2 * d2, d + d2}; // Coordenadas "x" de los puntos del nuevo polígono
