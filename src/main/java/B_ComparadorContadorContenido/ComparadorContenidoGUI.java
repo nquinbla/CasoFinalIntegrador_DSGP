@@ -11,6 +11,7 @@ public class ComparadorContenidoGUI extends JFrame {
     private JTextArea areaArchivo1;
     private JTextArea areaArchivo2;
 
+
     // Constructor
     public ComparadorContenidoGUI() {
         setTitle("Comparador de Contenido");
