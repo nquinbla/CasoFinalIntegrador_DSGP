@@ -10,14 +10,19 @@ public class DecoraciónPanel extends JPanel {
         int width = getWidth();
         int height = getHeight();
 
-        // Dibujar las líneas inclinadas para delimitar los colores
+        // Dibujar la primera línea inclinada de izquierda a derecha
         g2d.setColor(Color.BLUE);
-        g2d.drawLine(width / 3, 0, 0, height); // Línea inclinada de izquierda a derecha
-        g2d.drawLine(2 * width / 3, 0, width, height); // Línea inclinada de derecha a izquierda
+        g2d.drawLine(width / 3, 0, 0, height);
 
-        // Dibujar un triángulo inclinado entre las líneas
-        int[] xPoints = {width / 3, 2 * width / 3, width / 2};
-        int[] yPoints = {0, 0, height};
-        g2d.fillPolygon(xPoints, yPoints, 3); // Triángulo inclinado entre las líneas
+        // Dibujar la segunda línea inclinada de derecha a izquierda
+        g2d.setColor(Color.BLUE);
+        g2d.drawLine(width * 2 / 3, 0, width, height);
+
+        // Dibujar un triángulo entre las dos líneas
+        int[] xPoints = {0, width / 3, width * 2 / 3}; // Coordenadas x de los puntos del triángulo
+        int[] yPoints = {height, 0, 0}; // Coordenadas y de los puntos del triángulo
+        int nPoints = 3; // Número de puntos del triángulo
+        g2d.setColor(Color.BLUE);
+        g2d.fillPolygon(xPoints, yPoints, nPoints); // Dibujar y rellenar el triángulo
     }
 }
