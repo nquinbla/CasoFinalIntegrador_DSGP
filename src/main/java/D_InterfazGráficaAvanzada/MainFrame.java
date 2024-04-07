@@ -4,6 +4,8 @@ import A_EditorTextoInteractivo.EditorTextoGUI;
 import B_ComparadorContadorContenido.ComparadorContenidoGUI;
 import C_BúsquedaYGestión.AgendaContactosGUI;
 import C_BúsquedaYGestión.BuscadorPalabrasGUI;
+import E_ValidaciónYDiseño.HerramientaDibujo;
+import E_ValidaciónYDiseño.ValidadorEmailGUI;
 
 import javax.swing.*;
 import java.awt.*;
@@ -128,7 +130,7 @@ public class MainFrame extends JFrame {
         menuBusquedaGestion.add(itemBusquedaGestion);
 
         JMenuItem itemAgendaContactos = new JMenuItem("Agenda de Contactos");
-        itemAgendaContactos.addActionListener(new ActionListener() {
+        itemAgendaContactos.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
                 AgendaContactosGUI agendaContactosGUI = new AgendaContactosGUI();
@@ -137,11 +139,22 @@ public class MainFrame extends JFrame {
         });
         menuBusquedaGestion.add(itemAgendaContactos);
 
-        JMenuItem itemValidacionDiseno = new JMenuItem("Validación y Diseño");
-        itemValidacionDiseno.addActionListener(new ActionListener() {
+        JMenuItem itemValidorEmail = new JMenuItem("Validador de Email");
+        itemValidorEmail.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Aquí puedes abrir una nueva ventana para la Validación y Diseño
+                ValidadorEmailGUI validadorEmailGUI = new ValidadorEmailGUI();
+                validadorEmailGUI.setVisible(true);
+            }
+        });
+        menuValidacionDiseno.add(itemValidorEmail);
+
+        JMenuItem itemHerramientaDibujo = new JMenuItem("Herramienta de Dibujo");
+        itemHerramientaDibujo.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                HerramientaDibujo herramientaDibujo = new HerramientaDibujo();
+                herramientaDibujo.setVisible(true);
             }
         });
     }
