@@ -81,4 +81,10 @@ public class EditorTextoGUI extends JFrame {
         }
     }
 
+    // Ejecución
+    public static void main(String[] args) {
+        EditorTextoGUI editor = new EditorTextoGUI();
+        editor.setVisible(true);
+    }
+
 }

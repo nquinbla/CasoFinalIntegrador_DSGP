@@ -3,6 +3,7 @@ package D_InterfazGráficaAvanzada;
 import javax.swing.*;
 import java.awt.*;
 
+// no es coña profe que esto es lo que más he tardado en hacer, me aparecían diecisietemil triangulos cuando solo quería decorarlo con dos líneas
 public class DecoraciónPanel extends JPanel {
     public void paintComponent(Graphics g) {
 
@@ -30,7 +31,7 @@ public class DecoraciónPanel extends JPanel {
 
         // Dibujar la segunda línea inclinada de izquierda a derecha equidistante de la primera
         g2d.setColor(colorlínea);
-        g2d.drawLine(width / 3 + d, 0, d, height); // Ajustar el punto de inicio en el eje "y" a 0
+        g2d.drawLine(width / 3 + d, 0, d, height);
 
         // Dibujar las nuevas líneas más finas en el lado derecho
         int d2 = width / 2; // Aumentar la distancia de las nuevas líneas a la izquierda del panel

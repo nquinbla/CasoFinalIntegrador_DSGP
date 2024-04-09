@@ -2,7 +2,7 @@ package D_InterfazGráficaAvanzada;
 
 import javax.swing.*;
 import java.awt.*;
-
+// clase VentanaDocumento
 public class VentanaDocumento extends JInternalFrame {
 
     public VentanaDocumento() {

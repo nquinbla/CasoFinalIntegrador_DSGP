@@ -98,7 +98,6 @@ public class MainFrame extends JFrame {
         // Agregar la barra de menú al marco principal
         setJMenuBar(menuBar);
 
-        // Configurar la acción de los elementos del menú para cada módulo
         // Editor de Texto Interactivo
         JMenuItem itemEditorTexto = new JMenuItem("Editor de Texto Interactivo");
         itemEditorTexto.addActionListener(new ActionListener() {

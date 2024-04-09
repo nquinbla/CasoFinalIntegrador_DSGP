@@ -6,6 +6,7 @@ public class AnálisisTexto {
     public AnálisisTexto() {
         texto = "";
     }
+
     // Método para contar palabras
     public int contarPalabras() {
         String[] palabras = texto.split("\\s+");

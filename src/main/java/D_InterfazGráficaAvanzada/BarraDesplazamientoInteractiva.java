@@ -3,8 +3,10 @@ import javax.swing.*;
 import java.awt.event.AdjustmentEvent;
 import java.awt.event.AdjustmentListener;
 
+// Barra de desplazamiento interactiva
 public class BarraDesplazamientoInteractiva extends JFrame {
 
+    // Constructor
     public BarraDesplazamientoInteractiva() {
         setTitle("Barra de Desplazamiento Interactiva");
         setSize(400, 300);
@@ -24,6 +26,7 @@ public class BarraDesplazamientoInteractiva extends JFrame {
         getContentPane().add(scrollPane);
     }
 
+    // Método principal
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             @Override

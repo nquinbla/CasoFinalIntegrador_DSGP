@@ -5,9 +5,11 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+// Clase que permite dibujar líneas en un panel, importante que cuando ejecutes y dibujes lo hagas en líneas rectas.
 public class HerramientaDibujoGUI extends JFrame {
     private int x, y;
 
+    // Constructor que inicializa la ventana y sus componentes
     public HerramientaDibujoGUI() {
         setTitle("Herramienta de Dibujo");
         setSize(400, 300);
@@ -29,5 +31,11 @@ public class HerramientaDibujoGUI extends JFrame {
         });
 
         getContentPane().add(panel);
+    }
+
+    // Método principal que crea una instancia de la clase HerramientaDibujoGUI y la muestra
+    public static void main(String[] args) {
+        HerramientaDibujoGUI dibujo = new HerramientaDibujoGUI();
+        dibujo.setVisible(true);
     }
 }

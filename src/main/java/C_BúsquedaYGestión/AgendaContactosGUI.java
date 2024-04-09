@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
 
+// Clase que representa la interfaz gráfica de la agenda de contactos
 public class AgendaContactosGUI extends JFrame {
 
     private JTextField campoNombre;
@@ -14,6 +15,7 @@ public class AgendaContactosGUI extends JFrame {
     private JTextArea areaContactos;
     private AgendaContactos agenda;
 
+    // Constructor de la clase
     public AgendaContactosGUI() {
         setTitle("Agenda de Contactos");
         setSize(600, 400);
@@ -23,6 +25,7 @@ public class AgendaContactosGUI extends JFrame {
         campoEmail = new JTextField(20);
         campoTelefono = new JTextField(20);
 
+        // Botones de la interfaz
         JButton btnAgregar = new JButton("Agregar");
         btnAgregar.addActionListener(new ActionListener() {
             @Override
@@ -47,6 +50,7 @@ public class AgendaContactosGUI extends JFrame {
             }
         });
 
+        // Área de texto para mostrar los contactos
         areaContactos = new JTextArea();
         areaContactos.setEditable(false);
         JScrollPane scrollPane = new JScrollPane(areaContactos);
@@ -72,6 +76,7 @@ public class AgendaContactosGUI extends JFrame {
         agenda = new AgendaContactos();
     }
 
+    // Método que agrega un contacto a la agenda
     private void agregarContacto() {
         String nombre = campoNombre.getText();
         String email = campoEmail.getText();
@@ -81,6 +86,7 @@ public class AgendaContactosGUI extends JFrame {
         actualizarAreaContactos();
     }
 
+    // Método que elimina un contacto de la agenda
     private void eliminarContacto() {
         String email = campoEmail.getText();
         List<Contacto> contactos = agenda.buscarContactoPorEmail(email);
@@ -90,6 +96,7 @@ public class AgendaContactosGUI extends JFrame {
         }
     }
 
+    // Método que busca un contacto en la agenda
     private void buscarContacto() {
         String palabra = campoNombre.getText();
         List<Contacto> contactos = agenda.buscarContactos(palabra);
@@ -99,10 +106,17 @@ public class AgendaContactosGUI extends JFrame {
         }
     }
 
+    // Método que actualiza el área de contactos
     private void actualizarAreaContactos() {
         areaContactos.setText(""); // Limpiar el área de texto
         for (Contacto contacto : agenda.getContactos()) { // Recorrer todos los contactos
             areaContactos.append(contacto.getNombre() + " - " + contacto.getEmail() + " - " + contacto.getTelefono() + "\n"); // Agregar cada contacto al área de texto
         }
+    }
+
+    // Método principal de la clase
+    public static void main(String[] args) {
+        AgendaContactosGUI agendaGUI = new AgendaContactosGUI();
+        agendaGUI.setVisible(true);
     }
 }

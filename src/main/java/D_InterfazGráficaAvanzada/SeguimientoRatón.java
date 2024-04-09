@@ -3,6 +3,7 @@ import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+// Clase que muestra la posición del ratón en una etiqueta
 public class SeguimientoRatón extends JFrame {
 
     public SeguimientoRatón() {
@@ -21,6 +22,7 @@ public class SeguimientoRatón extends JFrame {
         });
     }
 
+    // Método principal
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             @Override

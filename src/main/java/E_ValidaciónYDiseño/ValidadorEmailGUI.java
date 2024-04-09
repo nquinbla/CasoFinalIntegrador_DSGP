@@ -7,9 +7,11 @@ import java.awt.event.ActionListener;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+// Clase que permite validar un email ingresado por el usuario
 public class ValidadorEmailGUI extends JFrame {
     private JTextField campoEmail;
 
+    // Constructor que inicializa la ventana y sus componentes
     public ValidadorEmailGUI() {
         setTitle("Validador de Email");
         setSize(400, 200);
@@ -42,5 +44,11 @@ public class ValidadorEmailGUI extends JFrame {
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(email);
         return matcher.matches();
+    }
+
+    // Método principal que crea una instancia de la clase ValidadorEmailGUI y la muestra
+    public static void main(String[] args) {
+        ValidadorEmailGUI validador = new ValidadorEmailGUI();
+        validador.setVisible(true);
     }
 }
