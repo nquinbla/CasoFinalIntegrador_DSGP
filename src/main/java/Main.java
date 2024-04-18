@@ -72,11 +72,15 @@ public class Main extends JFrame {
 
         // Logo de la Universidad UAX (más pequeño)
         ImageIcon logoIcon = new ImageIcon("C:\\Users\\nerea\\OneDrive\\Imágenes\\logoUAX-removebg-preview.png");
-        Image img = logoIcon.getImage();
-        Image newImg = img.getScaledInstance(logoIcon.getIconWidth() / 3, logoIcon.getIconHeight() / 3, Image.SCALE_SMOOTH);
-        ImageIcon newLogoIcon = new ImageIcon(newImg);
-        JLabel logoLabel = new JLabel(newLogoIcon);
-        panelLogo.add(logoLabel);
+        if (logoIcon.getIconWidth() > 0 && logoIcon.getIconHeight() > 0) {
+            Image img = logoIcon.getImage();
+            Image newImg = img.getScaledInstance(logoIcon.getIconWidth() / 3, logoIcon.getIconHeight() / 3, Image.SCALE_SMOOTH);
+            ImageIcon newLogoIcon = new ImageIcon(newImg);
+            JLabel logoLabel = new JLabel(newLogoIcon);
+            panelLogo.add(logoLabel);
+        } else {
+            System.err.println("Error: Could not read image file");
+        }
 
         // Crear la barra de menú
         JMenuBar menuBar = new JMenuBar();
