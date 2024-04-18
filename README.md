@@ -3,7 +3,7 @@ Caso Final Integrador: Desarrollo de un Sistema de Gestión de Publicaciones de 
 LINK: https://github.com/nquinbla/CasoFinalIntegrador_Publicaciones.git
 
 ## DESCRIPCIÓN
- Un programadonde al iniciarse lo primero que ves es la pantalla inciial. Aparece el título de la UAX con los subtítulos de la universidad y de la asignatura correspondiente, acompañados de un fondo azul claro combiando con formas geométricas más oscuras, también aparece el logo de la universidad. DEntro podemos ejecutar cinco tipos de porgramas explicados más adelante donde podremos editar un texto y guardarlo, abrir un archivo txt y cambiarelo, comparar dos archivos, buscar palabras en un texto, validar email, etc.
+Un programa donde al iniciarse lo primero que ves es la pantalla incial. Aparece el título de la UAX con los subtítulos de la universidad y de la asignatura correspondiente, acompañados de un fondo azul claro combiando con formas geométricas más oscuras, también aparece el logo de la universidad. DEntro podemos ejecutar cinco tipos de porgramas explicados más adelante donde podremos editar un texto y guardarlo, abrir un archivo txt y cambiarelo, comparar dos archivos, buscar palabras en un texto, validar email, etc.
 
 ## MÓDULO
  ### 1. Editor de Texto Interactivo (Ejercicio 1 y 2)
